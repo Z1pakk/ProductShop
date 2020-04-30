@@ -1,0 +1,35 @@
+﻿<Window x:Class="ProductShopClient.ProductEditAdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductShopClient"
+        mc:Ignorable="d"
+        Title="Products editing" 
+        Height="450"
+        Width="800">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <UniformGrid Grid.Column="0"
+                 Rows="3">
+      <Button Click="Add_Click"
+              Margin="10,50"
+              Content="Add"
+              FontSize="15"/>
+      <Button Click="Edit_Click"
+              Margin="10,50"
+              Content="Edit"
+              FontSize="15"/>
+      <Button Click="Exit_Click"
+              Margin="10,50"
+              Content="Exit"
+              FontSize="15"/>
+    </UniformGrid>
+    <Frame Grid.Column="1"
+           Name="productWorkFrame"
+           NavigationUIVisibility="Hidden"/>
+  </Grid>
+</Window>
