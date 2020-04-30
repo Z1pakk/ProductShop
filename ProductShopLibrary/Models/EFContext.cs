@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProductShopLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace BankomatLibrary.EFContext
         {
 
         }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }

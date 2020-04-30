@@ -59,10 +59,20 @@
     <Compile Include="Migrations\202004281801193_Start.designer.cs">
       <DependentUpon>202004281801193_Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004291752513_added category table.cs" />
+    <Compile Include="Migrations\202004291752513_added category table.designer.cs">
+      <DependentUpon>202004291752513_added category table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004301527446_added categories..cs" />
+    <Compile Include="Migrations\202004301527446_added categories..designer.cs">
+      <DependentUpon>202004301527446_added categories..cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\EFContext.cs" />
     <Compile Include="IAccountService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WCFCategory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +81,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004281801193_Start.resx">
       <DependentUpon>202004281801193_Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004291752513_added category table.resx">
+      <DependentUpon>202004291752513_added category table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004301527446_added categories..resx">
+      <DependentUpon>202004301527446_added categories..cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
