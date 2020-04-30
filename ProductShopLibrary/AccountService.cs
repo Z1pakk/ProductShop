@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using ProductShopLibrary.Models.EFContext;
 
 namespace ProductShopLibrary
 {
@@ -14,7 +15,7 @@ namespace ProductShopLibrary
 
         public void Disconnect(string token)
         {
-           Accounts.FirstOrDefault(t => t.Token == token).Token = null;
+            Accounts.FirstOrDefault(t => t.Token == token).Token = null;
         }
 
         public Account GetInfo(string token)
@@ -25,21 +26,27 @@ namespace ProductShopLibrary
 
         public void Register(Account account, string password)
         {
-            account.IdGuid = Guid.NewGuid().ToString();
-            account.Password = password;
-            this.Accounts.Add(account);
+            using (EFContext con = new EFContext())
+            {
+                account.IdGuid = Guid.NewGuid().ToString();
+                account.Password = password;
+                con.Accounts.Add(account);
+            }
         }
 
         public string Login(string login, string password)
         {
-            var loginedUser = this.Accounts.FirstOrDefault(t => t.UserName == login && t.Password == password);
-            if (loginedUser != null)
+            using (EFContext con = new EFContext())
             {
-                string token = Guid.NewGuid().ToString();
-                this.Accounts.FirstOrDefault(t=>t == loginedUser).Token = token;
-                return token;
+                var loginedUser = con.Accounts.FirstOrDefault(t => t.UserName == login && t.Password == password);
+                if (loginedUser != null)
+                {
+                    string token = Guid.NewGuid().ToString();
+                    con.Accounts.FirstOrDefault(t => t == loginedUser).Token = token;
+                    return token;
+                }
+                return null;
             }
-            return null;
         }
     }
 }

@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankomatLibrary.EFContext
+namespace ProductShopLibrary.Models.EFContext
 {
-    public class EFContext:DbContext
+    public class EFContext : DbContext
     {
-        public EFContext():base("DbConnection")
+        public EFContext() : base("DbConnection")
         {
 
         }
+        public DbSet<Account> Accounts { get; set; }
     }
 }
