@@ -15,5 +15,8 @@ namespace ProductShopLibrary
 
         [DataMember]
         public string Name { get; set; }
+
+        [DataMember]
+        public List<string> Products { get; set; }
     }
 }

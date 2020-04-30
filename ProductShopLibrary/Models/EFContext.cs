@@ -17,5 +17,6 @@ namespace BankomatLibrary.EFContext
         public DbSet<Products> Products { get; set; }
 
         public DbSet<Category> Categories { get; set; }
+
     }
 }

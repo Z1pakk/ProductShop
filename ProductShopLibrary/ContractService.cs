@@ -14,10 +14,16 @@ namespace ProductShopLibrary
         {
             using (EFContext context = new EFContext())
             {
+                List<string> prods = new List<string>();
                 List<WCFCategory> categories = new List<WCFCategory>();
                 foreach (var item in context.Categories)
                 {
-                    categories.Add(new WCFCategory() { Id = item.Id, Name = item.Name });
+                    foreach(var it in item.ProductsOf)
+                    {
+                        prods.Add(it.Name);
+                    }
+
+                    categories.Add(new WCFCategory() { Id = item.Id, Name = item.Name,Products=prods });
                 }
                 return categories;
             }

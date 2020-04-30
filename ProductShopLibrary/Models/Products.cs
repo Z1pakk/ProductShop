@@ -25,5 +25,10 @@ namespace ProductShopLibrary.Models
         public int Discount { get; set; }
         [Required]
         public float Price_vs_Discount { get; set; }
+
+        [Required,ForeignKey("CategoryOf")]
+        public int CategoryId { get; set; }
+
+        public Category CategoryOf { get; set; }
     }
 }
