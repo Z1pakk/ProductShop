@@ -62,7 +62,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EFContext.cs" />
     <Compile Include="IAccountService.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

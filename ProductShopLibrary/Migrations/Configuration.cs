@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BankomatLibrary.EFContext.EFContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ProductShopLibrary.Models.EFContext.EFContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BankomatLibrary.EFContext.EFContext context)
+        protected override void Seed(ProductShopLibrary.Models.EFContext.EFContext context)
         {
             //  This method will be called after migrating to the latest version.
 
