@@ -43,17 +43,6 @@ namespace ProductShopLibrary
             return null;
         }
 
-        public List<WCFCategory> GetCategories(string login, string password)
-        {
-            using(EFContext context = new EFContext())
-            {
-                List<WCFCategory> categories = new List<WCFCategory>();
-                foreach(var item in context.Categories)
-                {
-                    categories.Add(new WCFCategory() { Id = item.Id, Name = item.Name });
-                }
-                return categories;
-            }
-        }
+        
     }
 }

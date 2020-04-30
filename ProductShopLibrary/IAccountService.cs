@@ -10,8 +10,6 @@ namespace ProductShopLibrary
     [ServiceContract]
     public interface IAccountService
     {
-        [OperationContract]
-        List<WCFCategory> GetCategories(string login, string password);
 
         [OperationContract]
         string Login(string login, string password);

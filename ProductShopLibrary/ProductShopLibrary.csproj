@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="AccountService.cs" />
+    <Compile Include="ContractService.cs" />
+    <Compile Include="ICategoryService.cs" />
     <Compile Include="Migrations\202004281801193_Start.cs" />
     <Compile Include="Migrations\202004281801193_Start.designer.cs">
       <DependentUpon>202004281801193_Start.cs</DependentUpon>
