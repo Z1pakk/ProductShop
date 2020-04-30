@@ -32,6 +32,8 @@ namespace ProductShopClient
             if (returnData != null)
             {
                 MessageBox.Show("You succesfully logined! Token:" + returnData);
+                Show_Products show_products = new Show_Products();
+                show_products.ShowDialog();
             }
             else
             {
