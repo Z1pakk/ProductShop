@@ -69,11 +69,17 @@
     <Compile Include="Migrations\202004301527446_added categories..designer.cs">
       <DependentUpon>202004301527446_added categories..cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004301728481_add tble Product.cs" />
+    <Compile Include="Migrations\202004301728481_add tble Product.designer.cs">
+      <DependentUpon>202004301728481_add tble Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\EFContext.cs" />
     <Compile Include="IAccountService.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WCF_Models\WCF_Product.cs" />
     <Compile Include="WCFCategory.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +96,11 @@
     <EmbeddedResource Include="Migrations\202004301527446_added categories..resx">
       <DependentUpon>202004301527446_added categories..cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004301728481_add tble Product.resx">
+      <DependentUpon>202004301728481_add tble Product.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
